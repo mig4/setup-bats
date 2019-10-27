@@ -1,0 +1,17 @@
+{
+    "problemMatcher": [
+        {
+            "owner": "bats",
+            "pattern": [
+                {
+                    "regexp": "^not ok (\\d+) (.*)$",
+                    "message": 2
+                },
+                {
+                    "regexp": "^ ✗ (.*)$",
+                    "message": 1
+                }
+            ]
+        }
+    ]
+}
