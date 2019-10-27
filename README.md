@@ -20,7 +20,7 @@ jobs:
     steps:
 
       - name: Setup BATS
-        uses: mig4/setup-bats@master
+        uses: mig4/setup-bats@v1
         with:
           bats-version: 1.1.0
 
