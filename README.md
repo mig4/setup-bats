@@ -1,8 +1,8 @@
-[![Builds](https://github.com/mig4/setup-bats/workflows/ci/badge.svg)](https://github.com/mig4/setup-bats/actions?workflow=ci)
+[![tag-badge][]]() [![CI][ci-badge]][ci-target]
 
 # Setup BATS 🦇
 
-An :octocat: GitHub Action to setup [BATS testing framework][bats].
+A :octocat: GitHub Action to setup [BATS testing framework][bats].
 
 > **:warning: Note:** [GitHub Actions](https://github.com/features/actions) are currently only available in public beta, you have to [apply](https://github.com/features/actions/signup/) to gain access.
 
@@ -123,5 +123,8 @@ See the [versioning documentation](https://github.com/actions/toolkit/blob/maste
 [![license-badge][]](LICENSE)
 
 
+[tag-badge]: https://img.shields.io/github/v/tag/mig4/setup-bats
+[ci-badge]: https://github.com/mig4/setup-bats/workflows/CI/badge.svg
+[ci-target]: https://github.com/mig4/setup-bats/actions?workflow=CI
 [bats]: https://github.com/bats-core/bats-core
 [license-badge]: https://img.shields.io/github/license/mig4/setup-bats?style=for-the-badge
