@@ -30,3 +30,9 @@ jobs:
 
       - name: Test
         run: npm test
+
+      - name: Setup BATS
+        uses: ./
+
+      - name: BATS test
+        run: bats __tests__/integration.bats
