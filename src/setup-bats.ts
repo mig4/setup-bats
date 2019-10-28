@@ -1,5 +1,5 @@
 import * as core from "@actions/core";
-import * as path from "path";
+// import * as path from "path";
 import { ensureBatsAvailable } from "./installer";
 
 async function run() {
@@ -9,10 +9,10 @@ async function run() {
 
     await ensureBatsAvailable(version);
 
-    const matchersPath = path.join(__dirname, "..", ".github");
-    console.log(
-      `##[add-matcher]${path.join(matchersPath, "bats-matcher.json")}`
-    );
+    // const matchersPath = path.join(__dirname, "..", ".github");
+    // console.log(
+    //   `##[add-matcher]${path.join(matchersPath, "bats-matcher.json")}`
+    // );
   } catch (error) {
     core.setFailed(error.message);
   }
