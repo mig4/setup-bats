@@ -109,6 +109,22 @@ $ git commit -a -m "Release v1"
 $ git push origin releases/v1
 ```
 
+Now to release a new minor/patch versions from that branch (replace `.x.y` as
+appropriate):
+
+``` bash
+# update "version" property in `package.json`
+$ npm install
+$ npm run build && npm run format
+$ npm prune --production
+$ git add -A
+$ git commit -v -m "Release v1.x.y"
+$ git push
+$ git tag -s v1.x.y
+$ git tag -fs v1 -m "Update v1 tag"
+$ git push --tags --force
+```
+
 The action is now published! :rocket: 
 
 See the [versioning documentation](https://github.com/actions/toolkit/blob/master/docs/action-versioning.md)
