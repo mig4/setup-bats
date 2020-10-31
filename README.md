@@ -4,8 +4,6 @@
 
 A :octocat: GitHub Action to setup [BATS testing framework][bats].
 
-> **:warning: Note:** [GitHub Actions](https://github.com/features/actions) are currently only available in public beta, you have to [apply](https://github.com/features/actions/signup/) to gain access.
-
 ## Usage 🚀
 
 A sample workflow to run tests using [BATS][] (`.github/workflows/ci.yml`):
