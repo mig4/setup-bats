@@ -1,6 +1,6 @@
 {
   "name": "setup-bats",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "private": true,
   "description": "An action to setup BATS testing framework",
   "main": "lib/setup-bats.js",
