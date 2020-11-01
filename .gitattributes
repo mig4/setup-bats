@@ -1,2 +1,1 @@
-/lib/** linguist-detectable=false
-/node_modules/** linguist-detectable=false
+dist/** -diff linguist-generated=true 

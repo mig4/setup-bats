@@ -56,13 +56,14 @@ Install the dependencies
 $ npm install
 ```
 
-Build the typescript
+Build the typescript, apply formatting, lint and package the code for
+distribution and run unit tests:
 
 ```bash
-$ npm run build
+$ npm run all
 ```
 
-Run the tests :heavy_check_mark:  
+Run the tests separately :heavy_check_mark:  
 
 ```bash
 $ npm test
@@ -85,26 +86,31 @@ See the documentation:
 
 #### Publishing to a distribution branch
 
-Actions are run from GitHub repos. It's recommended for users to only refer to
-release branches instead of consuming master directly. To create a release
-branch, you'd normally do:
+Actions are run from GitHub repos so the branch which will be used at runtime
+needs to have the `dist/` folder checked-in. It's recommended for users to only
+refer to released versions instead of consuming master directly.
+
+The distribution is created with [ncc](https://github.com/zeit/ncc) which can
+be invoked via:
 
 ``` bash
-$ git checkout -b releases/v1
-$ npm prune --production
-$ git add node_modules
-$ git commit -a -m "Release v1"
+$ npm run package
+$ git add dist
+$ git commit -a -m "prod package"
 ```
 
-However some of that is automated using [husky](https://github.com/typicode/husky)
-git hooks, so it's enough to just do:
+Now to release a new minor/patch versions (replace `.x.y` as appropriate):
 
 ``` bash
-$ git checkout -b releases/v1
-sed -i '/^node_modules/s/^/#/' .gitignore
-# update README.md to refer to @v1
-$ git commit -a -m "Release v1"
-$ git push origin releases/v1
+# update "version" property in `package.json`
+$ npm install
+$ npm run all
+$ git add -A
+$ git commit -v -m "Release v1.x.y"
+$ git push
+$ git tag -s v1.x.y
+$ git tag -fs v1 -m "Update v1 tag"
+$ git push --tags --force
 ```
 
 The action is now published! :rocket: 
