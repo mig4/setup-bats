@@ -113,6 +113,12 @@ $ git tag -fs v1 -m "Update v1 tag"
 $ git push --tags --force
 ```
 
+For the tag to be published to marketplace you need to create a release from
+it which you can do by going into _Releases_ in GitHub UI, then _Tags_ and
+clicking the menu next to the newly created tag and select _Create release_.
+Alternatively use the URL (replace `x.y` as appropriate):
+https://github.com/mig4/setup-bats/releases/new?tag=v1.x.y
+
 The action is now published! :rocket: 
 
 See the [versioning documentation](https://github.com/actions/toolkit/blob/master/docs/action-versioning.md)
