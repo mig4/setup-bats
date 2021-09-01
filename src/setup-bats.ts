@@ -13,8 +13,9 @@ async function run(): Promise<void> {
     // console.log(
     //   `##[add-matcher]${path.join(matchersPath, "bats-matcher.json")}`
     // );
-  } catch (error) {
-    core.setFailed(error.message)
+  } catch (error: unknown) {
+    const {message} = error as Error
+    core.setFailed(message)
   }
 }
 
