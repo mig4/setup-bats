@@ -13,6 +13,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Show info
+        run: npm version
+
       - name: Install deps
         run: npm install
 
@@ -25,13 +28,11 @@ jobs:
   test: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
-
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Show info
+        run: npm version
 
       - name: Setup BATS
         uses: ./
