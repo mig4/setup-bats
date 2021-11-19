@@ -20,10 +20,10 @@ jobs:
       - name: Setup BATS
         uses: mig4/setup-bats@v1
         with:
-          bats-version: 1.2.1
+          bats-version: 1.5.0
 
       - name: Check out code
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
       - name: Test
         run: bats -r .
@@ -33,7 +33,7 @@ jobs:
 
 Options available as keys in `with` block
 
-- `bats-version` (`string`): version of [BATS][] to setup, defaults to 1.2.1 if
+- `bats-version` (`string`): version of [BATS][] to setup, defaults to 1.5.0 if
   not set
 
 ## Platforms 🖥
